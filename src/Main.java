@@ -1,14 +1,41 @@
+import models.Human;
+import models.Employee;
+import models.Student;
+import interfaces.IStudy;
+import interfaces.IWork;
+
 public class Main {
     public static void main(String[] args) {
 
-        Human human = new Human("Alex", 25, true);
-        Employee employee = new Employee("Jake", 30, true, "Developer", 3000);
-        Student student = new Student("Anna", 19, false, "AITU", 3.9f);
+        Student student = new Student(
+                "Alex", 19, true,
+                "AITU", 3.9f, "ST123"
+        );
 
-        System.out.println(human.getInfo());
-        System.out.println(employee.getInfo());
-        System.out.println(student.getInfo());
+        Human humanEmployee = new Employee(
+                "Jake", 30, true,
+                "Developer", 3000
+        );
 
-        System.out.println(Employee.company);
+        IWork worker = new Employee(
+                "Sam", 28, true,
+                "Designer", 2500
+        );
+
+        IStudy learner = student;
+
+        System.out.println(student.sayHello());
+        student.study();
+        student.showStudentId();
+
+        System.out.println(humanEmployee.sayHello());
+
+        worker.work();
+        System.out.println("Salary: " + worker.getSalary());
+
+        learner.study();
+        System.out.println("GPA: " + learner.getPerformance());
+
+        System.out.println("Company: " + Employee.company);
     }
 }
