@@ -1,3 +1,5 @@
+package main;
+
 import models.Human;
 import models.Employee;
 import models.Student;
