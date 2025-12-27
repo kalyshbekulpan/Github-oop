@@ -16,5 +16,4 @@ public abstract class Human {
     public String getInfo() {
         return name + ", age: " + age;
     }
-
 }

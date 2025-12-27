@@ -37,7 +37,6 @@ public class Main {
 
         learner.study();
         System.out.println("GPA: " + learner.getPerformance());
-
         System.out.println("Company: " + Employee.company);
     }
 }

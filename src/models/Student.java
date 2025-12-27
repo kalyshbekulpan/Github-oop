@@ -15,7 +15,6 @@ public final class Student extends Human implements IStudy {
         this.gpa = gpa;
         this.studentId = studentId;
     }
-
     @Override
     public String sayHello() { return "Hello, I am a student"; }
 

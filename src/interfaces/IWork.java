@@ -1,5 +1,4 @@
 package interfaces;
-
 public interface IWork {
     void work();
     float getSalary();

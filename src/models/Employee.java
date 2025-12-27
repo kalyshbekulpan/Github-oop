@@ -15,7 +15,6 @@ public class Employee extends Human implements IWork, IStudy {
         this.position = position;
         this.salary = salary;
     }
-
     @Override
     public String sayHello() { return "Hello, I am an employee"; }
 
